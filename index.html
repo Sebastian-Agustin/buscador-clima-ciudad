@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buscador de Clima por Ciudad</title>
 </head>
 <body>
-    
+    <div id="container-clima">
+        <div class="container-form">
+            <form id="form">
+                <label>Consulte el clima:
+                    <input type="text" id="ciudad" required oninvalid="this.setCustomValidity('Por favor escribí una ciudad')"
+                    oninput="this.setCustomValidity('')"  placeholder="Ingrese el nombre de la ciudad">
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div id="resultado">
+            <p id="clima"></p>
+            <p id="temperatura"></p>
+            <p id="descripcion"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
